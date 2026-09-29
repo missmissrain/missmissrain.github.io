@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 个人博客
+title: MoYu的盗梦空间
 subtitle: '实验记录与论文理解'
 description: '记录实验过程、论文阅读与理解'
-keywords: 实验, 论文, 博客
-author: missmissrain
+keywords: 实验, 论文, 博客, 神经网络
+author: MoYu
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
@@ -96,7 +96,15 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: butterfly
+
+# Search
+## https://github.com/next-theme/hexo-generator-searchdb
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
