@@ -150,7 +150,7 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: true
+  enable: false
   # Typewriter Effect
   effect: true
   # Customize typed.js
@@ -288,7 +288,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description: 记录实验过程与论文理解
+    description: 本博客用于记录和整理研究进度与论文理解
     button:
       enable: true
       icon: fab fa-github
@@ -296,7 +296,7 @@ aside:
       link: https://github.com/missmissrain
   card_announcement:
     enable: true
-    content: 欢迎来到 MoYu 的盗梦空间，这里记录我的实验与论文阅读笔记。
+    content: 暂无公告
   card_recent_post:
     enable: true
     # If set 0 will show all
