@@ -152,10 +152,15 @@ index_top_img_height:
 subtitle:
   enable: true
   # Typewriter Effect
-  effect: false
+  effect: true
   # Customize typed.js
   # https://github.com/mattboldt/typed.js/#customization
   typed_option:
+    loop: false
+    typeSpeed: 120
+    startDelay: 300
+    showCursor: true
+    cursorChar: '|'
   # Source - Call the third-party service API (Chinese only)
   # It will show the source first, then show the content of sub
   # Choose: false/1/2/3
@@ -1084,6 +1089,40 @@ inject:
           var a = e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
           if (a) { e.preventDefault(); openContactModal(); }
         }, true);
+      })();
+      </script>
+    - |
+      <script>
+      (function () {
+        var PHRASE = ['愿你终将成为自己的造梦师'];
+        function retype() {
+          var node = document.getElementById('subtitle');
+          if (!node || !window.typedJSFn || !window.typedJSFn.init) return;
+          try { if (window.typed && window.typed.destroy) window.typed.destroy(); } catch (e) {}
+          node.textContent = '';
+          try { window.typedJSFn.init(PHRASE); } catch (e) {}
+        }
+        function setup() {
+          var header = document.getElementById('page-header');
+          if (!header || !document.getElementById('subtitle')) return;
+          if (header.getAttribute('data-retype-ready') === '1') return;
+          header.setAttribute('data-retype-ready', '1');
+          var wasOut = false;
+          if (!('IntersectionObserver' in window)) return;
+          new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                if (wasOut) { wasOut = false; retype(); }
+              } else {
+                wasOut = true;
+              }
+            });
+          }, { threshold: 0.2 }).observe(header);
+        }
+        if (window.btf && btf.addGlobalFn) btf.addGlobalFn('pjaxComplete', setup);
+        if (document.readyState !== 'loading') setup();
+        else document.addEventListener('DOMContentLoaded', setup);
+        window.addEventListener('load', setup);
       })();
       </script>
 
