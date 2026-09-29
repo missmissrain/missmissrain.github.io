@@ -150,9 +150,9 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect
-  effect: true
+  effect: false
   # Customize typed.js
   # https://github.com/mattboldt/typed.js/#customization
   typed_option:
@@ -166,9 +166,7 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
-    - 记录每一次实验，理解每一篇论文
-    - 让神经网络的冗余无处遁形
-    - 在权重与神经元之间寻找答案
+    - 愿你终将成为自己的造梦师
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -266,9 +264,9 @@ footer:
     since: 2025
   # Copyright of theme and framework
   copyright:
-    enable: true
-    version: true
-  custom_text: 愿你在此盗得一个好梦。
+    enable: false
+    version: false
+  custom_text: 愿你终将成为自己的造梦师
 
 # --------------------------------------
 # Aside Settings
