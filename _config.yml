@@ -106,6 +106,17 @@ search:
   content: true
   format: html
 
+# Markdown (hexo-renderer-markdown-it + KaTeX)
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: false
+    linkify: true
+    typographer: false
+  plugins:
+    - '@renbaoshuo/markdown-it-katex'
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
