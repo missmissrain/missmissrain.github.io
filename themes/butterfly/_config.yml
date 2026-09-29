@@ -1064,7 +1064,30 @@ inject:
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
     - <style>body,#article-container,.card-widget{font-weight:500;letter-spacing:.02em}h1,h2,h3,h4,h5,h6,#site-title,.recent-post-info .article-title{font-weight:700}.recent-post-item{border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.12);overflow:hidden}.recent-post-item:hover{box-shadow:0 10px 28px rgba(0,0,0,.2)}#article-container img{border-radius:12px}</style>
   bottom:
-    # - <script src="xxxx"></script>
+    - |
+      <script>
+      (function () {
+        var mail = '1974704197@qq.com';
+        function openContactModal() {
+          var old = document.getElementById('contact-author-modal');
+          if (old) old.parentNode.removeChild(old);
+          var mask = document.createElement('div');
+          mask.id = 'contact-author-modal';
+          mask.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.45);z-index:99999;display:flex;align-items:center;justify-content:center;';
+          var box = document.createElement('div');
+          box.style.cssText = 'background:var(--global-bg,#fff);color:var(--font-color,#4c4948);border-radius:14px;padding:26px 34px;box-shadow:0 12px 40px rgba(0,0,0,.28);max-width:88vw;text-align:center;font-weight:600;line-height:1.6;';
+          box.innerHTML = '<div style="font-size:18px;margin-bottom:10px;">联系作者</div><div style="font-size:16px;letter-spacing:.03em;">' + mail + '</div><button type="button" id="contact-author-ok" style="margin-top:20px;cursor:pointer;border:none;border-radius:8px;padding:8px 24px;background:#49b1f5;color:#fff;font-weight:600;font-size:14px;">确定</button>';
+          mask.appendChild(box);
+          document.body.appendChild(mask);
+          document.getElementById('contact-author-ok').addEventListener('click', function () { mask.parentNode.removeChild(mask); });
+          mask.addEventListener('click', function (e) { if (e.target === mask) mask.parentNode.removeChild(mask); });
+        }
+        document.addEventListener('click', function (e) {
+          var a = e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
+          if (a) { e.preventDefault(); openContactModal(); }
+        }, true);
+      })();
+      </script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
