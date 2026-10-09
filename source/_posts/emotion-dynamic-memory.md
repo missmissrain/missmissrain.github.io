@@ -6,7 +6,7 @@ categories:
 tags:
   - 智能体
   - 情绪计算
-  - 专利
+  - 强化学习
 description: "一份情绪动态演化记忆交互系统的设计概念整理：三层架构（感知／处理／决策）、七维双向情绪、长期记忆与情感态度、情绪传染，以及情绪驱动的策略演化闭环。"
 top_img: /images/emotion-agent/overview.png
 ---
