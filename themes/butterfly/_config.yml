@@ -49,7 +49,7 @@ code_blocks:
 social:
   fab fa-github: https://github.com/missmissrain || Github || '#24292e'
   fas fa-envelope: mailto:1974704197@qq.com || Email || '#4a7dbe'
-  fab fa-tiktok: https://www.douyin.com/user/MS4wLjABAAAAio8ecf1PiOkuzol9QwlzxBmVfDt9Cfv5nolnSQ0IY4I || 抖音 || '#FE2C55'
+  fab fa-douyin: https://www.douyin.com/user/MS4wLjABAAAAio8ecf1PiOkuzol9QwlzxBmVfDt9Cfv5nolnSQ0IY4I || 抖音 || '#000000'
 
 # --------------------------------------
 # Image Settings
@@ -1068,6 +1068,7 @@ inject:
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
     - <style>body,#article-container,.card-widget{font-weight:500;letter-spacing:.02em}h1,h2,h3,h4,h5,h6,#site-title,.recent-post-info .article-title{font-weight:700}.recent-post-item{border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.12);overflow:hidden}.recent-post-item:hover{box-shadow:0 10px 28px rgba(0,0,0,.2)}#article-container img{border-radius:12px}</style>
     - '<style>#page-header{background-image:none!important;background-color:transparent!important;-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%)}</style>'
+    - '<style>.fa-douyin::before{content:"";display:inline-block;width:1em;height:1em;vertical-align:-.125em;background-color:currentColor;-webkit-mask:url(/img/douyin.svg) no-repeat center/contain;mask:url(/img/douyin.svg) no-repeat center/contain}[data-theme="dark"] .fa-douyin::before{background-color:#fff}</style>'
   bottom:
     - |
       <script>
